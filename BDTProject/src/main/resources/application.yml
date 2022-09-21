@@ -1,0 +1,21 @@
+bearer-token: AAAAAAAAAAAAAAAAAAAAAEnJhAEAAAAA%2Bhf8I40gUzx%2F7UdMwCRSJn0NjDc%3DDThESMjk16jn7KuHx8uiVSOjSOQYGxCCQS4q6N7poljJ0HUFaJ
+spring:
+ cloud:
+  stream:
+   source: tweetProducer
+   bindings:
+    tweetProducer-out-0:
+     destination: twitter
+     binder: bdt
+     contentType: application/json
+   binders:
+    bdt:
+     type: kafka
+     environment:
+      spring:
+       cloud:
+        stream:
+         kafka:
+          binder:
+           brokers: localhost:9092
+server.port: 8081
