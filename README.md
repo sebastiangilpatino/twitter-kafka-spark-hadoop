@@ -2,7 +2,8 @@
 ## Jorge Sebastian Gil Patino. ID: 612422
 ### 9/22/22
 ![Pipeline](https://github.com/sebastiangilpatino/twitter-kafka-spark-hadoop/blob/master/Pipeline.jpg)  
-Vide link : https://mum0-my.sharepoint.com/:v:/g/personal/jgilpatino_miu_edu/EejydkVN27BJp0NvnOKG2B0BQsc6KpBAs7PQTgvGM4PPZw?e=Kl5QeP
+Video link 1: https://mum0-my.sharepoint.com/:v:/g/personal/jgilpatino_miu_edu/EejydkVN27BJp0NvnOKG2B0BQsc6KpBAs7PQTgvGM4PPZw?e=Kl5QeP
+Video link 2: https://mum0-my.sharepoint.com/:v:/g/personal/jgilpatino_miu_edu/EejydkVN27BJp0NvnOKG2B0BQsc6KpBAs7PQTgvGM4PPZw?e=1sTUhE
 
 This project is to show the knowdledge acquire in the Big Data course in the Maharishi International University. The project consist in two JAVA applications.
 1. Consumer from Twitter and Producer to Kafka topic
