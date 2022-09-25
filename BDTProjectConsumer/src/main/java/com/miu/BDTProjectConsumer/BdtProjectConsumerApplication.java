@@ -21,7 +21,6 @@ public class BdtProjectConsumerApplication {
 		String ZOOKEEPER = "localhost:2181";
 		String KAFKA_SERVER = "localhost:9092";
 		String TOPIC1_NAME = "twitter";
-		String REGEX = "[^\\x00-\\x7E]|\\r|\\n|\\r\\n";
 		Integer SAMPLE_TIME = 10000;
 
 		SparkConf sparkConf = new SparkConf().setAppName("Twitter").setMaster(
@@ -46,8 +45,7 @@ public class BdtProjectConsumerApplication {
 
 		javaStream.foreachRDD((rdd, time) -> {
 			JavaRDD<String> plainRDD = rdd.coalesce(1)
-					.map(tuple -> (String) tuple._2())
-					.map(s -> s.replaceAll(REGEX, " "));
+					.map(tuple -> (String) tuple._2());
 			plainRDD.saveAsTextFile("hdfs://quickstart.cloudera:8020/user/cloudera/twitter/"
 					+ System.currentTimeMillis());
 		});
